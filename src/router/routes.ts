@@ -12,6 +12,13 @@ const routes: RouteRecordRaw[] = [
         name: 'chat',
         component: () => import('pages/chat.vue'),
         props: true,
+        beforeEnter: (to, from, next) => {
+          if (to.params.name) {
+            next()
+          } else {
+            next({ name: 'welcome' })
+          }
+        },
       },
     ],
   },
