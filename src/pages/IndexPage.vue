@@ -39,7 +39,7 @@ const username = ref("admin")
 const password = ref("admin")
 const login = () => {
   if (username.value === 'admin' && password.value === 'admin') {
-    router.push('/chat')
+    router.push('/welcome')
   }
 }
 </script>
